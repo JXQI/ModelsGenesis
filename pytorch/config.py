@@ -1,6 +1,12 @@
 import os
 import shutil
+import torch
 
+lr=0.01
+batch_size=4
+intial_epoch=0
+nb_epoch=10
+device=torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
 class models_genesis_config:
     model = "Unet3D"
     suffix = "genesis_chest_ct"
